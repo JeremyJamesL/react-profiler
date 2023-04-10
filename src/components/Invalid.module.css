@@ -1,0 +1,41 @@
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.invalid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 80%;
+    overflow: hidden;
+}
+
+.invalid-header {
+    background-color: var(--theme-colour);
+    padding: 15px;
+    color: white;
+}
+
+.invalid-body {
+    padding: 15px;
+}
+
+.invalid-btn {
+    text-align: right;
+}
+
+.para {
+    margin-bottom: 20px;
+}

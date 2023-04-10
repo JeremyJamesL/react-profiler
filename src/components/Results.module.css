@@ -1,0 +1,13 @@
+.results {
+    margin-top: 50px;
+}
+
+.results-list {
+    list-style-type: none;
+}
+
+.result {
+    margin-bottom: 20px;
+    border: 1px solid lightgray;
+    padding: 10px;
+}

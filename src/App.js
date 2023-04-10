@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Form from "./components/Form"
+import Results from "./components/Results";
+import Invalid from "./components/Invalid";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [results, updateResults] = useState([]);
+  const [isValid, updateValidity] = useState({
+    valid: false,
+    message: ""
+  });
 
-export default App;
+  const handleSaveData = (inputtedData) => {
+    updateResults(current => [...current, inputtedData]);
+  }
+
+  return (
+    <div className="container">
+      {isValid.valid ? <Invalid closeOverlay={updateValidity} errorMsg={isValid.message}/> : ''}
+      <Form onSaveData={handleSaveData} onCheckValidity={updateValidity}/>
+      <Results data={results}/>
+    </div>
+  )
+}
+export default App
