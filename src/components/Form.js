@@ -5,7 +5,6 @@ import cardStyles from './Card.module.css'
 function Form(props) {
   const [count, setCount] = useState(0);
 
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const name = e.target[0].value;
